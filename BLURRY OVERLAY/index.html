@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link href="CSS/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="frame">
+            HOVER
+            <div class="orange"></div>
+        </div>
+        
+    </body>
+    <script>
+        const frame = document.querySelector('.frame')
+        const orange = document.querySelector('.orange')
+
+            frame.addEventListener('mousemove', (event) => {
+                let rect = event.target.getBoundingClientRect()
+                event.target.getBoundingClientRect();
+                orange.style.height = `${event.clientY - rect.top + 0.5}px`
+                orange.style.transition = '0s'
+            })
+
+            frame.addEventListener('mouseleave', () => {
+                orange.style.transition = '1s'
+                orange.style.height = '50%'
+            })
+    </script>
+</html>
