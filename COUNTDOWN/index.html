@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link href="CSS/style.scss" rel="stylesheet">
+    </head>
+    <body>
+            <h1 id="cup">FIFA WORLD CUP</h1>
+            <img src="539a877871863eb63d8f3bfabc7fd41f79464edc.png "id="country">           
+            <img src="trophy.png" id="trophy">
+            <div id="timer">
+              <div id="days"> 
+                <div id="numbers"></div>
+                days
+              </div> 
+              <div id="hours"> 
+                <div id="numbers"></div>
+                hours
+              </div>
+              <div id="minutes">
+                <div id="numbers"></div>
+                minutes
+              </div> 
+              <div id="seconds">
+                <div id="numbers"></div>
+                seconds
+              </div>
+            </div>
+            <p><a class="info" href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022">
+              Check out the schedule here!</a></p>
+          <footer>
+            <p>made by <a style="text-decoration:none; color: white;" href="https://github.com/matheusarjc"> Matheusarjc</a>&#128516</p>
+          </footer>
+    </body>
+    <script>
+        let count_down = new Date('11/21/2022 09:00:00').getTime();
+        let x = setInterval(() => countDown(), timer);
+
+        // countdown
+        function countDown() {
+        let now = new Date(Date.now()).getTime();
+        let diff = count_down - now;
+
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+        
+        
+
+        // display
+        document.getElementById('days').innerText = Math.floor(diff / day) + ' Day(s)' ;
+        document.getElementById('hours').innerText = Math.floor(diff % day / hour) + ' Hour(s)';
+        document.getElementById('minutes').innerText = Math.floor(diff % hour / minute) + ' Minute(s)';
+        document.getElementById('seconds').innerText = Math.floor(diff % minute / second) + ' Second(s)';       
+        }
+    </script>
+</html>
