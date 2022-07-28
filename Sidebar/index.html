@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sidebar</title>
+</head>
+<body>
+    <div class="sidebar">
+        <!--Logo-->
+        <div class="logoBox">
+            <div class="logo">
+                <img src="img\logo.svg" alt="">
+            </div>
+            <img class="menu" src="img\menu.svg" alt="" id="btn">
+        </div>
+        <!--Logo-->
+        <!--navlist-->
+        <ul class="navlist">
+            <li class="inputWithIcon">
+                <input id="buscar" type="search" placeholder="Buscar">
+                <span class="toolipe">Buscar</span>
+                <img id="lupa" src="img\search.svg" alt="">
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="img\grid.svg" alt="">
+                    <span class="linksName">Dashboard</span>
+                    <span class="toolipe">Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="img\pet.svg" alt="">
+                    <span class="linksName">Pets</span>
+                    <span class="toolipe">Pets</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="img\user.svg" alt="">
+                    <span class="linksName">Clientes</span>
+                    <span class="toolipe">Clientes</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="img\vet.svg" alt="">
+                    <span class="linksName">Vets</span>
+                    <span class="toolipe">Vets</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="img\settings.svg" alt="">
+                    <span class="linksName">Ajustes</span>
+                    <span class="toolipe">Ajustes</span>
+                </a>
+            </li>
+        </ul>
+        <!--navlist-->
+        <!--Profile Content-->
+        <div class="profileContent">
+            <div class="profile">
+                <div class="profileDetail">
+                    <img src="img\photo.jpg" alt="">
+                    <div class="name_job">
+                        <div class="name">Eleanor Pena</div>
+                        <div class="job">Veterinária</div>
+                    </div>
+                </div>
+                <img src="img\log-out.svg" alt="" id="logout">
+            </div>
+            <!--log out-->
+            
+            <!--log out-->
+        </div>
+        <!--Profile Content-->
+
+    </div>
+    <!-- /.sidebar -->
+
+    <div class="homeContent">
+        <h2>Dashboard</h2>
+    </div>
+
+    <!--JS-->
+    <script>
+        const btn = document.querySelector('#btn');
+        const buscar = document.querySelector('#buscar')
+        const sidebar = document.querySelector('.sidebar')
+        const home = document.querySelector('.homeContent')
+
+        btn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            home.classList.toggle('active');
+        })
+
+        buscar.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            home.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>
